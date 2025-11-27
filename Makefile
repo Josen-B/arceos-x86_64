@@ -41,6 +41,5 @@ run: $(OUT_BIN)
 
 clean:
 	rm -rf $(CURDIR)/target qemu.log
-	cargo clean
 
 .PHONY: all run clean
