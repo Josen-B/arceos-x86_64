@@ -36,7 +36,7 @@ $(OUT_BIN):
 
 run: $(OUT_BIN)
 	$(QEMU) -m 128M -smp $(SMP) -machine q35 \
-	    -drive format=raw,file=$(OUT_BIN),if=ide \
+	    -kernel $(OUT_ELF) -nographic \
 	    -nographic -D qemu.log -d in_asm
 
 clean:

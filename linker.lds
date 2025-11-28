@@ -8,6 +8,11 @@ SECTIONS
     . = KERNEL_PHYS_BASE;
     _skernel = .;
 
+    /* -------- MULTIBOOT -------- */
+    .multiboot ALIGN(8) : {
+        *(.multiboot)
+    }
+
     /* -------- TEXT -------- */
     .text ALIGN(4K) : {
         _stext = .;
